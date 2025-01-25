@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chop & Choose</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('') no-repeat center center fixed; /* Replace with your image URL */
+            background-size: cover; /* Make the image cover the whole screen */
+            color: white; /* Set text color to white for readability */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #ffffff; /* Set background of the container to white */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #333; /* Set heading text color to dark for contrast */
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 16px;
+            color: #333; /* Dark gray label color for contrast */
+            margin-bottom: 8px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            background-color: #ffffff; /* Set input fields and dropdowns to white */
+            color: #333; /* Set text color to dark gray for readability */
+        }
+        select {
+            font-size: 16px;
+        }
+        input[type="text"]:focus, select:focus {
+            border-color: #007bff; /* Change border color when focused */
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chop & Choose</h1>
+
+    <div class="input-group">
+        <label for="ingredients">Enter available ingredients:</label>
+        <input type="text" id="ingredients" name="ingredients" placeholder="e.g. chicken, tomatoes, garlic">
+    </div>
+
+    <div class="input-group">
+        <label for="cuisine">Select a Cuisine:</label>
+        <select id="cuisine" name="cuisine">
+            <option value="italian">Italian</option>
+            <option value="indian">Indian</option>
+            <option value="korean">Korean</option>
+            <option value="arabic">Arabic</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label for="meal-type">Meal Type:</label>
+        <select id="meal-type" name="meal-type">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="dessert">Dessert</option>
+        </select>
+    </div>
+
+</div>
+
+</body>
+</html>
