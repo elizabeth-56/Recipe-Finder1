@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient and Meal Selection</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+            color: #333333; /* Dark text color for readability */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container for the input section */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff; /* White background for the form */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Label styling */
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555555; /* Medium gray for labels */
+            display: block;
+        }
+
+        /* Input field styling */
+        input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            margin-top: 8px;
+            font-size: 16px;
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 6px;
+            background-color: #f9f9f9; /* Light gray background */
+        }
+
+        /* Focus effect for the input field */
+        input[type="text"]:focus {
+            border-color: #66cc66; /* Green border on focus */
+            outline: none;
+        }
+
+        /* Styling for the SEARCH button (adjusted size) */
+        .search-button {
+            width: 150px; /* Width of the button */
+            height: 50px; /* Height of the button */
+            font-size: 16px;
+            background-color: #66cc66; /* Light green */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center; /* Horizontally center the text */
+            align-items: center; /* Vertically center the text */
+        }
+
+        .search-button:hover {
+            background-color: #45a045; /* Darker green on hover */
+        }
+
+        /* Styling for the drag bars */
+        .drag-bar {
+            margin-top: 30px;
+            background-color: #ffffff; /* White background */
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .drag-bar h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #555555; /* Medium gray */
+        }
+
+        /* Dropdown styling */
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 6px;
+            background-color: #f9f9f9; /* Light gray background */
+            color: #333333;
+            margin-top: 8px;
+        }
+
+        select:focus {
+            border-color: #66cc66; /* Green border on focus */
+            outline: none;
+        }
+
+        /* Centering the SEARCH button */
+        .search-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Main ingredient input section -->
+    <label for="main-ingredient">What is your main ingredient?</label>
+    <input type="text" id="main-ingredient" name="main-ingredient" placeholder="Enter ingredient name">
+</div>
+
+<!-- Drag bar for Cuisine selection with dropdown -->
+<div class="drag-bar">
+    <h2>Select the Cuisine</h2>
+    <select id="cuisine" name="cuisine">
+        <option value="indian">Indian</option>
+        <option value="italian">Italian</option>
+        <option value="chinese">Chinese</option>
+        <option value="korean">Korean</option>
+    </select>
+</div>
+
+<!-- Drag bar for Meal Type selection with dropdown -->
+<div class="drag-bar">
+    <h2>Select the Type of Meal</h2>
+    <select id="meal-type" name="meal-type">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+    </select>
+</div>
+
+<!-- SEARCH button centered inside a container -->
+<div class="search-button-container">
+    <button class="search-button">SEARCH</button>
+</div>
+
+</body>
+</html>

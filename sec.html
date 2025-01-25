@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chop & Choose</title>
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: white; /* Light beige, resembling dough or a natural food tone */
+            color: black; /* Dark chocolate brown for text */
+            margin: 10;
+            padding: 25px;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 200px;
+            border: 2px solid maroon; /* Tomato red for the border */
+            border-radius: 10px;
+            background-color: white; /* Light mustard yellow for the container background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styling */
+        h1 {
+            text-align: center;
+            color: maroon; /* Tomato red for the header */
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Label Styling */
+        label {
+            display: block;
+            font-size: 20px;
+            color: black; /* Olive green for labels */
+            margin-bottom: 20px;
+        }
+
+        /* Input and Select Styling */
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            font-size: 16px;
+            border: 2px solid #607d47; /* Olive green border */
+            border-radius: 6px;
+            background-color: #f8d7da; /* White background for inputs */
+            color: #4e3629; /* Dark text inside inputs for contrast */
+        }
+
+        /* Input focus effect */
+        input[type="text"]:focus, select:focus {
+            border-color: #d34e4e; /* Tomato red on focus */
+            outline: none;
+        }
+
+        /* Select box focus styling */
+        select {
+            font-size: 16px;
+        }
+
+        /* Adding a hover effect to buttons (in case you add a button in the future) */
+        button {
+            background-color: maroon; /* Tomato red button background */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #a53737; /* Darker red when hovering */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chop & Choose</h1>
+
+    <div class="input-group">
+        <label for="ingredients">Enter available ingredients:</label>
+        <input type="text" id="ingredients" name="ingredients" placeholder="e.g. chicken, tomatoes, garlic">
+    </div>
+
+    <div class="input-group">
+        <label for="cuisine">Select a Cuisine:</label>
+        <select id="cuisine" name="cuisine">
+            <option value="italian">Italian</option>
+            <option value="indian">Indian</option>
+            <option value="korean">Korean</option>
+            <option value="arabic">Arabic</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label for="meal-type">Meal Type:</label>
+        <select id="meal-type" name="meal-type">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="dessert">Dessert</option>
+        </select>
+    </div>
+
+    <!-- You can add a button for functionality later -->
+    <!-- <button>Get Recipe Suggestions</button> -->
+
+</div>
+
+</body>
+</html>

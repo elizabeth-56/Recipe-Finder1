@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient and Meal Selection</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+            color: #333333; /* Dark text color for readability */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container for the input section */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff; /* White background for the form */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Label styling */
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555555; /* Medium gray for labels */
+            display: block;
+        }
+
+        /* Input field styling */
+        input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            margin-top: 8px;
+            font-size: 16px;
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 6px;
+            background-color: #f9f9f9; /* Light gray background */
+        }
+
+        /* Focus effect for the input field */
+        input[type="text"]:focus {
+            border-color: #66cc66; /* Green border on focus */
+            outline: none;
+        }
+
+        /* Styling for the OK button */
+        .ok-button {
+            width: 15%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #66cc66; /* Light green */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ok-button:hover {
+            background-color: #45a045; /* Darker green on hover */
+        }
+
+        /* Styling for the drag bars */
+        .drag-bar {
+            margin-top: 30px;
+            background-color: #ffffff; /* White background */
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .drag-bar h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #555555; /* Medium gray */
+        }
+
+        /* Button styling for the cuisine and meal type selection */
+        .button-group {
+            display: flex;
+            justify-content: space-around;
+            gap: 5px;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #66cc66; /* Light green */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-group button:hover {
+            background-color: #45a045; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Main ingredient input section with "OK" button -->
+    <label for="main-ingredient">What is your main ingredient?</label>
+    <div style="display: flex; align-items: center;">
+        <input type="text" id="main-ingredient" name="main-ingredient" placeholder="Enter ingredient name">
+        <button class="ok-button">OK</button>
+    </div>
+</div>
+
+<!-- Drag bar for Cuisine selection -->
+<div class="drag-bar">
+    <h2>Select the Cuisine</h2>
+    <div class="button-group">
+        <button>Indian</button>
+        <button>Italian</button>
+        <button>Chinese</button>
+        <button>Korean</button>
+    </div>
+</div>
+
+<!-- Drag bar for Meal Type selection -->
+<div class="drag-bar">
+    <h2>Select the Type of Meal</h2>
+    <div class="button-group">
+        <button>Breakfast</button>
+        <button>Lunch</button>
+        <button>Dinner</button>
+        <button>Dessert</button>
+    </div>
+</div>
+
+</body>
+</html>
