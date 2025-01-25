@@ -7,9 +7,10 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('https://i.pinimg.com/736x/c7/89/64/c78964ae240e5e2dc01313f27d46d3fe.jpg') no-repeat center center fixed; /* Replace with your image URL */
-            background-size: cover; /* Make the image cover the whole screen */
-            color:; /* Set text color to white for readability */
+            background: url('https://i.pinimg.com/736x/c7/89/64/c78964ae240e5e2dc01313f27d46d3fe.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #A8D5BA; /* Soft green to match the background image */
+            color: white; /* Set text color to white for readability */
             margin: 0;
             padding: 20px;
         }
@@ -19,12 +20,12 @@
             padding: 30px;
             border: 2px solid #ddd;
             border-radius: 10px;
-            background-color: yellowgreen; /* Set background of the container to white */
+            background-color: yellowgreen; /* Keep container's background for contrast */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         h1 {
             text-align: center;
-            color:black; /* Set heading text color to dark for contrast */
+            color: black; /* Set heading text color to dark for contrast */
             font-size: 32px;
             margin-bottom: 30px;
         }
@@ -53,6 +54,23 @@
         input[type="text"]:focus, select:focus {
             border-color: #007bff; /* Change border color when focused */
             outline: none;
+        }
+        /* Add styling for the SEARCH button */
+        .search-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: darkgreen; /* Match the background color */
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .search-btn:hover {
+            background-color: green; /* Change color on hover */
         }
     </style>
 </head>
@@ -86,6 +104,8 @@
         </select>
     </div>
 
+    <!-- Add SEARCH button -->
+    <button class="search-btn">SEARCH</button>
 </div>
 
 </body>
