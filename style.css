@@ -1,40 +1,74 @@
-<style>
-body {
-    font-family: 'Arial', sans-serif;
+
+/* Reset margin, padding, and box-sizing */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
-    color: #333;
+    box-sizing: border-box;
 }
-h2 {
-    font-size: 1.8rem;
-    color: #fff;
-    margin: 10px 0 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-   } 
+
+/* Body and background */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #dabe93;
+    color: #080505;
+    padding: 30px;
+    text-align: center; /* Centering text on the page */
+}
+
+/* Main content */
+.content {
+    max-width: 800px;
+    margin: 0 auto; /* Centers the content horizontally */
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Align text to the left inside the content box */
+}
+
+/* Heading styles */
 h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 5.5rem;
+    color: maroon;
+    margin-bottom: 15px;
+    text-align: center; /* Center-align the main heading */
 }
-.content-box {
-    width: 300px;
-    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    padding: 20px;
-    text-align: justify;
+
+h2 {
+    font-size: 1.4rem;
+    color: maroon;
+    margin-bottom: 30px;
+    text-align: center; /* Center-align the subheading */
 }
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
+
+/* Card styling for the text */
+.card {
+    background-color: rgb(136, 122, 122);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Space between the headings and card */
 }
-</style>
+
+/* Paragraph inside the card */
+.card p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #c26508dd;
+    text-align: center; /* Justified text for better readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 100px;
+    }
+}
