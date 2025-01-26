@@ -79,34 +79,72 @@
 <div class="container">
     <h1>Chop & Choose</h1>
 
-    <div class="input-group">
-        <label for="ingredients">Enter available ingredients:</label>
-        <input type="text" id="ingredients" name="ingredients" placeholder="e.g. chicken, tomatoes, garlic">
-    </div>
+    <form id="recipe-form">
+        <div class="input-group">
+            <label for="ingredients">Enter available ingredients:</label>
+            <input type="text" id="ingredients" name="ingredients" placeholder="e.g. chicken, tomatoes, garlic">
+        </div>
 
-    <div class="input-group">
-        <label for="cuisine">Select a Cuisine:</label>
-        <select id="cuisine" name="cuisine">
-            <option value="italian">Italian</option>
-            <option value="indian">Indian</option>
-            <option value="korean">Korean</option>
-            <option value="arabic">Arabic</option>
-        </select>
-    </div>
+        <div class="input-group">
+            <label for="cuisine">Select a Cuisine:</label>
+            <select id="cuisine" name="cuisine">
+                <option value="italian">Italian</option>
+                <option value="indian">Indian</option>
+                <option value="korean">Korean</option>
+                <option value="arabic">Arabic</option>
+            </select>
+        </div>
 
-    <div class="input-group">
-        <label for="meal-type">Meal Type:</label>
-        <select id="meal-type" name="meal-type">
-            <option value="breakfast">Breakfast</option>
-            <option value="lunch">Lunch</option>
-            <option value="dinner">Dinner</option>
-            <option value="dessert">Dessert</option>
-        </select>
-    </div>
+        <div class="input-group">
+            <label for="meal-type">Meal Type:</label>
+            <select id="meal-type" name="meal-type">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="dessert">Dessert</option>
+            </select>
+        </div>
 
-    <!-- Add SEARCH button -->
-    <button class="search-btn">SEARCH</button>
+        <!-- Modify the SEARCH button to be a submit button -->
+        <button type="button" class="search-btn" onclick="submitForm()">SEARCH</button>
+    </form>
 </div>
+
+<script>
+    function submitForm() {
+        // Grab the input values
+        const ingredients = document.getElementById('ingredients').value;
+        const cuisine = document.getElementById('cuisine').value;
+        const mealType = document.getElementById('meal-type').value;
+
+        // Prepare the data object to be sent to the backend
+        const formData = {
+            ingredients: ingredients,
+            cuisine: cuisine,
+            meal_type: mealType
+        };
+
+        // Send the data to the backend using fetch
+        fetch('http://127.0.0.1:8000/generate-recipe', {
+            method: 'POST', // Or use 'GET' depending on your backend
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData) // Convert form data to JSON format
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response from the backend if needed
+            console.log('Success:', data.recipe);
+            localStorage.setItem("recipe",data.recipe)
+            // Optionally, redirect to another page or display a message
+            window.location.href = "last.html"; // Redirect to 'last.html' after successful submission
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
 
 </body>
 </html>
