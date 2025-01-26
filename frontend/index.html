@@ -3,68 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recipe Finder - Chop & Choose</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #bbeba8, #ffffff);
+            background-image: url('https://i.pinimg.com/736x/5c/13/4f/5c134fbc70f33b1e2291ac5bb04b00c5.jpg');
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+        header {
+            background-color: rgb(178, 232, 186);
+            color: #003d19;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        header h1 {
+            font-size: 3.8em;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .welcome-container {
+            padding: 60px 20px;
+            background-image: url('https://i.pinimg.com/736x/3c/6b/ad/3c6bad503fece6f1a076b0a5afeb7066.jpg'); /* Example background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 50px auto;
+            transform: scale(0.98);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .welcome-container:hover {
+            transform: scale(1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        .welcome-container h2 {
+            font-size: 2.8em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeIn 1s ease-out;
+        }
+        .welcome-container p {
+            font-size: 1.3em;
+            color: whitesmoke; /* Changed text color to black */
+            max-width: 700px;
+            margin: 0 auto;
+            padding-bottom: 30px;
+            line-height: 1.6;
+            animation: slideIn 1s ease-out;
+        }
+        .button {
+            background-color: #ff6347;
+            color: white;
+            padding: 18px 35px;
+            font-size: 1.4em;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover {
+            background-color: #d9534f;
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #003d19;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background: linear-gradient(to right, #bbeba8, #ffffff);
-        color: #333;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    header {
-        background-color: rgb(178, 232, 186);
-        color: #003d19;
-        padding: 30px 0;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    header h1 {
-        font-size: 3.5em;
-        margin: 0;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-    .welcome-container {
-        padding: 60px 20px;
-        background-image: url('https://images.unsplash.com/photo-1584817031231-6170303492d4'); /* Example background image */
-        background-size: cover;
-        background-position: center;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        max-width: 800px;
-        margin: 50px auto;
-    }
-    .welcome-container h2 {
-        font-size: 2.8em;
-        color: #004d1b;
-        margin-bottom: 20px;
-    }
-    .welcome-container p {
-        font-size: 1.3em;
-        color: black; /* Changed the text color to black */
-        max-width: 700px;
-        margin: 0 auto;
-        padding-bottom: 30px;
-    }
-    .button {
-        background-color: #ff6347;
-        color: white;
-        padding: 18px 35px;
-        font-size: 1.4em;
-        text-decoration: none;
-        border-radius: 50px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        margin-top: 20px;
-    }
-    .button:hover {
-        background-color: #d9534f;
-    }
- </style>
 <body>
     
+        
+    </header>
+
+    <div class="welcome-container">
+        <h2>Welcome to Chop & Choose!</h2>
+        <p>"Stuck staring at your fridge wondering what to cook? Fear not! Our Recipe Finder is here to save your culinary day. Just toss in what you've got, and we'll serve up a tasty dish that'll make you feel like a kitchen pro (even if you're just winging it). Whether you're cooking for one or impressing a crowd, we've got a recipe for every craving—no judgment, just deliciousness!"</p>
+        <a href="third.html" class="button">Start Searching</a>
+    </div>
+
+    <footer>
+        &copy; 2025 Chop & Choose. All Rights Reserved.
+    </footer>
 </body>
 </html>
